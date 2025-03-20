@@ -6,8 +6,7 @@ gunicorn app:app
 
 @app.route('/')
 def index():
-    # Load the CSV file into a DataFrame, setting the first column as the index
-    table1_df = pd.read_csv("Table 1.csv", index_col=0)  # Use index_col=0 to set the first column as the index
+    table1_df = pd.read_csv("Table 1.csv", index_col=0)
     
     # Strip whitespace from index names (if any)
     table1_df.index = table1_df.index.str.strip()
