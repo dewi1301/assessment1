@@ -2,7 +2,6 @@ from flask import Flask, render_template, send_file
 import pandas as pd
 
 app = Flask(__name__)
-gunicorn app:app
 
 @app.route('/')
 def index():
